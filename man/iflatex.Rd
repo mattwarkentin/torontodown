@@ -21,4 +21,3 @@ iflatex("\\\\vspace*{\\\\fill}")
 }
 
 }
-

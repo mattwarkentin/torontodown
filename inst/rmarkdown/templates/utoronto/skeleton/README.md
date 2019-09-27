@@ -1,7 +1,9 @@
-# Oregon State University RMarkdown thesis template
+# University of Toronto RMarkdown thesis template
 
-This is the unofficial Oregon State University RMarkdown thesis template. You 
-can find a copy of this template at https://github.com/zkamvar/beaverdown.
+This is the unofficial University of Toronto RMarkdown thesis template. You 
+can find a copy of this template at https://github.com/mattwarkentin/torontodown.
+
+The template used in this package is a modified version of the TeX templated developed and maintained by Francois Pitt, which can be found at: (https://www.sgs.utoronto.ca/academic-progress/program-completion/formatting/)
 
 To install the template, be sure you have the following:
 
@@ -10,24 +12,19 @@ To install the template, be sure you have the following:
  - [R >= 3.3.0][2]
  - [RStudio][3] (optional, but it helps)
 
-To get this document, you've either opened a new Rmarkdown document from Rstudio
-using the oregonstate template or you've run the followin command in a clean
-working directory:
-
-```r
-rmarkdown::draft("index.Rmd", template = "oregonstate", package = "thesisdown")
-```
+To get this document, you have opened a new Rmarkdown document from Rstudio
+using the `utoronto` template.
 
 ## Rendering
 
-To render your thesis, you can open `index.Rmd` in RStudio and then hit the
+To render your thesis, you can open `index.Rmd` (or whatever you named the file; so long as it agrees with the name in `_bookdown.yml`) in RStudio and then hit the
 "knit" button. Alternatively, you can use:
 
 ```r
 rmarkdown::render("index.Rmd")
 ```
 
-Your thesis will be deposited in the `_book/` directory.
+Your thesis will be deposited in the `_book/` directory (this directory will be created upon first knitting).
 
 ## Components
 

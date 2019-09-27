@@ -1,7 +1,9 @@
-Package: beaverdown
-Title: An updated R Markdown thesis template for Oregon State University using the bookdown package
-Version: 0.2.1
-Authors@R: c(person(c("Zhian", "N."), "Kamvar", email = "zkamvar@gmail.com", role = c("aut", "cre")),
+Package: torontodown
+Title: An updated R Markdown thesis template for University of Toronto using the bookdown package
+Version: 0.0.1
+Authors@R: c(
+    person(c("Matthew", "T."), "Warkentin", email = "matt.warkentin@mail.utoronto.ca", role = c("aut", "cre")),
+    person(c("Zhian", "N."), "Kamvar", email = "zkamvar@gmail.com", role = c("aut", "cre")),
     person("Chester", "Ismay", email = "chester.ismay@gmail.com", role = c("aut", "ccp")),
     person("Rick","Treinen", email = "NA", role = c("aut")),
     person("Neville", "Mehta", email = "neville@lifetime.oregonstate.edu", role = c("aut")),
@@ -9,7 +11,7 @@ Authors@R: c(person(c("Zhian", "N."), "Kamvar", email = "zkamvar@gmail.com", rol
     person("John", "Metta", email = "john.pennington@lifetime.oregonstate.edu", role = c("aut", "ccp"))
     )
 Description: Using the bookdown package and LaTeX and Word thesis templates from
-    Oregon State University, this package was derived from Chester Ismay's
+    University of Toronto, this package was derived from Chester Ismay's
     package "thesisdown"
 Depends:
     R (>= 3.3.0),
@@ -22,4 +24,4 @@ Imports: yaml
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 5.0.1
+RoxygenNote: 6.1.1

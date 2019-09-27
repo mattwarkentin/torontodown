@@ -23,4 +23,3 @@ cat("  this is\\nsome text that\\nwill be renedered in\\na file\\n", file = f)
 cat(inc(f))
 close(f)
 }
-

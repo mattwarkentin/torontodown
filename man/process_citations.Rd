@@ -37,4 +37,3 @@ process_citations(txt, yml)
 \seealso{
 \code{\link{render_caption}}
 }
-

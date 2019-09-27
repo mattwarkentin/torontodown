@@ -43,4 +43,3 @@ render_caption(caption, index = "skeleton.Rmd")
 \seealso{
 \code{\link{process_citations}}
 }
-
