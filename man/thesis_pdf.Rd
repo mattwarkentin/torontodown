@@ -14,7 +14,7 @@ thesis_pdf(toc = TRUE, toc_depth = 3, ...)
 \item{...}{arguments to be passed to \code{rmarkdown::\link[rmarkdown]{pdf_document}}}
 }
 \value{
-A modified \code{pdf_document} based on the Reed Senior Thesis LaTeX
+A modified \code{pdf_document} based on the University of Toronto Thesis LaTeX
   template
 }
 \description{
