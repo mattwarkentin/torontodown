@@ -4,7 +4,7 @@
 \name{torontodown}
 \alias{torontodown}
 \alias{torontodown-package}
-\title{torontodown: A package for creating undergraduate, Masters, and PhD theses
+\title{torontodown: A package for creating Masters and Doctoral theses
 using R Markdown}
 \description{
 This package creates theses/dissertations for University of Toronto.

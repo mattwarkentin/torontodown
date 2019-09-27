@@ -1,4 +1,4 @@
-#' torontodown: A package for creating undergraduate, Masters, and PhD theses
+#' torontodown: A package for creating Masters and Doctoral theses
 #'using R Markdown
 #'
 #' This package creates theses/dissertations for University of Toronto.

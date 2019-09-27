@@ -3,7 +3,7 @@ Title: An updated R Markdown thesis template for University of Toronto using the
 Version: 0.0.1
 Authors@R: c(
     person(c("Matthew", "T."), "Warkentin", email = "matt.warkentin@mail.utoronto.ca", role = c("aut", "cre")),
-    person(c("Zhian", "N."), "Kamvar", email = "zkamvar@gmail.com", role = c("aut", "cre")),
+    person(c("Zhian", "N."), "Kamvar", email = "zkamvar@gmail.com", role = c("aut", "ccp")),
     person("Chester", "Ismay", email = "chester.ismay@gmail.com", role = c("aut", "ccp")),
     person("Rick","Treinen", email = "NA", role = c("aut")),
     person("Neville", "Mehta", email = "neville@lifetime.oregonstate.edu", role = c("aut")),
