@@ -2,36 +2,22 @@
 #
 # Required Information --------------------------------------------------------
 #
-doctype: 'Dissertation'            # or Thesis
-title: 'An Analysis of Something'  # make a better title than this...
-author: 'Joseph A. Student'
-date: 'January 1, 2013'            # date of submission
-commencement: '2013'               # year of commencement
-degree: 'Doctor of Philosophy'     # Masters of Science, Art, etc. 
-major: 'Radiation Health Physics'
-depttype: 'School'                 # Department, College, etc.
-depthead: 'Head'                   # Chair, Chancellor, Interim Head, etc.
-department: 'Nuclear Engineering and Radiation Health Physics'
-advisor: 'Jane R. Professor'
+degree: 'Doctor of Philosophy'
+department: 'Public Health Sciences'
+gradyear: '2020'
+author: 'John Doe'
+title: 'Thesis Title'
 #
-# Optional Information --------------------------------------------------------
-#
-# un-comment the following lines if you have a second major in a different dept.
-# twomajor: 'Creative Writing'
-# depttype: 'School'
-# department: 'Writing Literature and Film'
-# depthead: 'Chair'
-# coadvisor: 'Sir Writes A. Lot'
 #
 # Rendering Options -----------------------------------------------------------
 #
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
 output: 
-  beaverdown::thesis_pdf: default
-#  beaverdown::thesis_gitbook: default
-#  beaverdown::thesis_word: default
-#  beaverdown::thesis_epub: default
+  torontodown::thesis_pdf: default
+#  torontodown::thesis_gitbook: default
+#  torontodown::thesis_word: default
+#  torontodown::thesis_epub: default
 # If you are creating a PDF you'll need to write your preliminary content here 
 # or use code similar to the line below for the files.  If you are producing in 
 # a different format than PDF, you can delete or ignore the following lines in 
@@ -49,17 +35,12 @@ link-citations: yes
 # Pretext sections ------------------------------------------------------------
 #
 abstract: >
-  `r if(knitr:::is_latex_output()) beaverdown::inc("pre/00-abstract.Rmd")`
+  `r if(knitr:::is_latex_output()) torontodown::inc("pre/00-abstract.Rmd")`
 # If you'd rather include the preliminary content in files instead of inline
 # like below, use a command like that for the abstract above.  Note that a tab is 
 # needed on the line after the >.
 acknowledgements: >
-  `r if(knitr:::is_latex_output()) beaverdown::inc("pre/00-acknowledgements.Rmd")`
-contributors: > 
-  `r if(knitr:::is_latex_output()) beaverdown::inc("pre/00-contributors.Rmd")`
-dedication: >
-  This is for my mother 
-  who paved the way.
+  `r if(knitr:::is_latex_output()) torontodown::inc("pre/00-acknowledgements.Rmd")`
 # preface: >  
 #  Uncomment the above to include a preface. Again, this can be rendered much
 #  like the files above.
@@ -84,14 +65,14 @@ thesis.Rmd file and then knit again.
 -->
 
 ```{r include_packages, include = FALSE}
-# This chunk ensures that the beaverdown package is
-# installed and loaded. This beaverdown package includes
+# This chunk ensures that the torontodown package is
+# installed and loaded. This torontodown package includes
 # the template files for the thesis.
 if(!require(devtools))
   install.packages("devtools", repos = "http://cran.rstudio.com")
-if(!require(beaverdown))
-  devtools::install_github("zkamvar/beaverdown")
-library(beaverdown)
+if(!require(torontodown))
+  devtools::install_github("mattwarkentin/torontodown")
+library(torontodown)
 ```
 
 <!-- 
@@ -109,8 +90,8 @@ can also use {.unnumbered} so the introduction will be "Chapter 0."
 # Introduction {-}
 
 Welcome to the _R Markdown_ thesis template. This template is based on (and in
-many places copied directly from) the [Oregon State University LaTeX
-template][0] and wrapped up into Chester Ismay's [*beaverdown* package][1], but
+many places copied directly from) the [University of Toronto LaTeX
+template][0] and wrapped up into Matt Warkentin's [*torontodown* package][1], but
 hopefully it will provide a nicer interface for those that have never used TeX
 or LaTeX before.  Using _R Markdown_ will also allow you to easily keep track of
 your analyses in **R** chunks of code, with the resulting plots and output
@@ -197,5 +178,5 @@ adipiscing tempus. Aenean posuere malesuada rhoncus. Ut quis elit eros.
 
 
 
-[0]: https://www.overleaf.com/latex/templates/oregon-state-university-thesis-and-dissertation/wnvzcdhqshxf
-[1]: https://github.com/zkamvar/beaverdown
+[0]: https://ctan.org/tex-archive/macros/latex/contrib/ut-thesis/
+[1]: https://github.com/mattwarkentin/torontodown
