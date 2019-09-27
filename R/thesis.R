@@ -9,7 +9,7 @@
 #' @param toc_depth A positive integer
 #' @param ... arguments to be passed to \code{rmarkdown::\link[rmarkdown]{pdf_document}}
 #'
-#' @return A modified \code{pdf_document} based on the Reed Senior Thesis LaTeX
+#' @return A modified \code{pdf_document} based on the University of Toronto Thesis LaTeX
 #'   template
 #' @note The arguments highlight, keep_tex, and pandoc_args, are already set.
 #' @examples
@@ -23,7 +23,7 @@ thesis_pdf <- function(toc = TRUE, toc_depth = 3, ...){
     toc_depth = toc_depth,
     highlight = "pygments",
     keep_tex = TRUE,
-    pandoc_args = "--chapters",
+    pandoc_args = "--top-level-division=chapter",
     ...)
 
   # Mostly copied from knitr::render_sweave
@@ -76,7 +76,7 @@ thesis_gitbook <- function(){
 #'
 #' @export
 #' @return A Word Document based on (hopefully soon, but not currently)
-#' the Reed Senior Thesis Word template
+#' the University of Toronto Thesis Word template
 #' @examples
 #' \dontrun{
 #'  output: thesisdown::thesis_word
