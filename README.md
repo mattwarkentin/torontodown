@@ -1,10 +1,17 @@
+
+<!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+<!-- badges: end -->
+
+---
+
 # torontodown
 
-This project is a modified version Chester Ismay's [thesisdown][4] and Zhian Kavmar's [beaverdown][6] package to 
-provide support for University of Toronto's thesis formatting guidelines.
+This project is a modified version Chester Ismay's [thesisdown][4] and Zhian Kavmar's [beaverdown][5] package to provide support for University of Toronto's thesis formatting guidelines.
 
-Currently, the PDF version is fully functional. All other versions are derived from thesisdown and are not guaranteed to work.
+Currently, the PDF version is fully functional. All other versions are derived from `thesisdown` and are not guaranteed to work.
 
+---
 
 ## Installation
 
@@ -29,7 +36,7 @@ select the **University of Toronto** from the **Templates**.
 <!--replace image with new one-->
 <!--![New R Markdown](thesis_rmd.png)-->
 
-Make sure to give your thesis a title and save it to the correct path. Rstudio
+Make sure to give your thesis a title and save it to the correct path. RStudio
 will send you to that directory and then you should open `_bookdown.yml` and
 edit the first Rmd file to be the name of your project:
 
@@ -38,15 +45,22 @@ book_filename: "thesis"
 chapter_name: "Chapter "
 -rmd_files: ["index.Rmd",
 +rmd_files: ["myThesis.Rmd",
-  "chapters/01-chap1.Rmd",
-  "chapters/02-chap2.Rmd",
-  "chapters/03-chap3.Rmd",
-  "chapters/04-conclusion.Rmd",
+  "chapters/01-chap1-introduction.Rmd",
+  "chapters/02-chap2-background.Rmd",
+  "chapters/03-chap3-methods.Rmd",
+  "chapters/04-chap4-results.Rmd",
+  "chapters/05-chap5-discussion.Rmd",
   "chapters/99-references.Rmd"
   ]
 ```
 
-Instructions for editing are in the [README file][5].
+Instructions for editing are in the [README file][6].
+
+---
+
+Please note that the 'torontodown' project is released with a
+[Contributor Code of Conduct](CODE_OF_CONDUCT.md).
+By contributing to this project, you agree to abide by its terms.
 
 <!--
 The current output for the four versions is here:
@@ -86,5 +100,5 @@ Note that this will currently only **Knit** if you name the directory `index` as
  [2]: https://r-project.org
  [3]: https://rstudio.org
  [4]: https://github.com/ismayc/thesisdown
- [5]: https://github.com/zkamvar/beaverdown/tree/master/inst/rmarkdown/templates/oregonstate/skeleton#readme
- [6]: https://github.com/zkamvar/beaverdown/
+ [5]: https://github.com/zkamvar/beaverdown/
+ [6]: https://github.com/mattwarkentin/torontodown/tree/master/inst/rmarkdown/templates/utoronto/skeleton#readme

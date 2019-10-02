@@ -26,6 +26,6 @@ The arguments highlight, keep_tex, and pandoc_args, are already set.
 }
 \examples{
 \dontrun{
- output: thesisdown::thesis_pdf
+ output: torontodown::thesis_pdf
 }
 }

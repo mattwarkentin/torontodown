@@ -14,7 +14,7 @@
 #' @note The arguments highlight, keep_tex, and pandoc_args, are already set.
 #' @examples
 #' \dontrun{
-#'  output: thesisdown::thesis_pdf
+#'  output: torontodown::thesis_pdf
 #' }
 thesis_pdf <- function(toc = TRUE, toc_depth = 3, ...){
 
@@ -47,7 +47,7 @@ thesis_pdf <- function(toc = TRUE, toc_depth = 3, ...){
 #' @return A gitbook webpage
 #' @examples
 #' \dontrun{
-#'  output: thesisdown::thesis_gitbook
+#'  output: torontodown::thesis_gitbook
 #' }
 thesis_gitbook <- function(){
 
@@ -79,7 +79,7 @@ thesis_gitbook <- function(){
 #' the University of Toronto Thesis Word template
 #' @examples
 #' \dontrun{
-#'  output: thesisdown::thesis_word
+#'  output: torontodown::thesis_word
 #' }
 thesis_word <- function(){
 
@@ -104,7 +104,7 @@ thesis_word <- function(){
 #' @return A ebook version of the thesis
 #' @examples
 #' \dontrun{
-#'  output: thesisdown::thesis_epub
+#'  output: torontodown::thesis_epub
 #' }
 thesis_epub <- function(){
 

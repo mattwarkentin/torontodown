@@ -1,6 +1,7 @@
-# torontodown 0.0.1
+# torontodown 0.1.0
 
- - Under development...
+ - Initial release of `torontodown`
+ - PDF format of thesis document working
 
 # beaverdown 0.2.1
 

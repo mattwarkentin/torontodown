@@ -59,10 +59,79 @@
 %%    `11pt', `12pt'), and standard LaTeX packages can be used to
 %%    further customize the layout and/or formatting of the document.
 
-%% *** Add any desired options. ***
-\documentclass{ut-thesis}
+%% Updated by MTW
+\documentclass[
+$if(draft)$
+  draft,
+$endif$
+$if(fontsize)$
+  $fontsize$,
+$endif$
+$if(margins)$
+  $margins$,
+$endif$
+$if(spacing)$
+  $spacing$,
+$endif$
+$if(clearpagestyle)$
+  $clearpagestyle$,
+$endif$
+$if(notespacing)$
+  $notespacing$,
+$endif$
+$for(classoption)$
+  $classoption$$sep$,
+$endfor$
+]{ut-thesis}
 
-%% *** Add \usepackage declarations here. ***
+% Additional packages to work with R Markdown
+\usepackage{appendix}
+\usepackage{graphicx,latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb,amsthm}
+\usepackage{longtable,booktabs,setspace}
+\usepackage[hyphens]{url}
+\usepackage[colorlinks = true,
+			urlcolor = blue,
+			linkcolor = black,
+			citecolor = black,
+			anchorcolor = black]{hyperref}
+\usepackage{lmodern}
+\usepackage{float}
+\floatplacement{figure}{H}
+% End of CII addition
+\usepackage{rotating} % Package added to allow the rotation of figures and chart
+                      % on a page, {sidewaysfigure} command
+\usepackage{tablefootnote} % Packaged added to allow footnotes in the tabular
+                           % environment, use \tablefootnote command
+
+% Added to fix issue with Pandoc
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+% end add
+
+% Added by MTW to provide proper Appendix functionality
+\usepackage{scrwfile}
+
+\TOCclone[List of Appendices]{toc}{atoc}
+\addtocontents{atoc}{\protect\value{tocdepth}=-1}
+\newcommand\listofappendices{\listofatoc}
+
+\newcommand*\savedtocdepth{}
+\AtBeginDocument{%
+  \edef\savedtocdepth{\the\value{tocdepth}}%
+}
+
+\let\originalappendix\appendix
+\renewcommand\appendix{%
+  \originalappendix
+  \cleardoublepage
+  \addcontentsline{toc}{chapter}{\appendixname}%
+  \addtocontents{toc}{\protect\value{tocdepth}=-1}%
+  \addtocontents{atoc}{\protect\value{tocdepth}=\savedtocdepth}%
+}
+
+
 %% The standard packages `geometry' and `setspace' are already loaded by
 %% `ut-thesis' -- see their documentation for details of the features
 %% they provide.  In particular, you may use the \geometry command here
@@ -94,17 +163,18 @@
 
 %% *** NOTE ***
 %% Put here all other formatting commands that belong in the preamble.
-%% In particular, you should put all of your \newcommand's,
-%% \newenvironment's, \newtheorem's, etc. (in other words, all the
-%% global definitions that you will need throughout your thesis) in a
-%% separate file and use "\input{filename}" to input it here.
+
+%%  Add by MTW
+$for(header-includes)$
+  $header-includes$
+$endfor$
 
 
 %% *** Adjust the following settings as desired. ***
 
 %% List only down to subsections in the table of contents;
 %% 0=chapter, 1=section, 2=subsection, 3=subsubsection, etc.
-\setcounter{tocdepth}{$toc_depth$}
+\setcounter{tocdepth}{$toc-depth$} %% Updated by MTW
 
 %% Make each page fill up the entire page.
 \flushbottom
@@ -129,6 +199,7 @@
 %% This generates the abstract page, with the line spacing adjusted
 %% according to SGS guidelines.
 \begin{abstract}
+\addcontentsline{toc}{chapter}{Abstract}
 $abstract$
 %% *** Put your Abstract here. ***
 %% (At most 150 words for M.Sc. or 350 words for Ph.D.)
@@ -162,50 +233,39 @@ $acknowledgements$
 %% *** Put your Acknowledgements here. ***
 \end{acknowledgements}
 
-%% This generates the Table of Contents (on a separate page).
-\tableofcontents
 
-%% This generates the List of Tables (on a separate page), if needed
-%% (uncomment to have it appear in the document).
-\listoftables
+$if(listsintoc)$
+  %% Table of Contents
+  \tableofcontents
 
-%% This generates the List of Figures (on a separate page), if needed
-%% (uncomment to have it appear in the document).
-\listoffigures
+  %% List of Tables
+  \addcontentsline{toc}{chapter}{\listtablename}
+  \listoftables
 
-%% You can add commands here to generate any other material that belongs
-%% in the head matter (for example, List of Plates, Index of Symbols, or
-%% List of Appendices).
+  %% List of Figures
+  \addcontentsline{toc}{chapter}{\listfigurename}
+  \listoffigures
+
+  %% List of Appendices).
+  $if(loa)$
+    \addcontentsline{toc}{chapter}{List of Appendices}
+    \listofappendices
+  $endif$
+$endif$
 
 %% End of the preliminary sections: reset page style and numbering.
 \end{preliminary}
 
+%% *** Chapters go here. ***
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%  Put your Chapters here; the easiest way to do this is to keep     %%
-%%  each chapter in a separate file and `\include' all the files.     %%
-%%  Each chapter file should start with "\chapter{ChapterName}".      %%
-%%  Note that using `\include' instead of `\input' will make each     %%
-%%  chapter start on a new page, and allow you to format only parts   %%
-%%  of your thesis at a time by using `\includeonly'.                 %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Content from before_body will go here
 
-%% *** Include chapter files here. ***
+% Body
+$body$
 
+% Content from after_body will go here
 
-%% This adds a line for the Bibliography in the Table of Contents.
-\addcontentsline{toc}{chapter}{Bibliography}
-%% *** Set the bibliography style. ***
-%% (change according to your preference/requirements)
-\bibliographystyle{plain}
 %% *** Set the bibliography file. ***
-%% ("thesis.bib" by default; change as needed)
 \bibliography{$bibliography$}
-
-%% *** NOTE ***
-%% If you don't use bibliography files, comment out the previous line
-%% and use \begin{thebibliography}...\end{thebibliography}.  (In that
-%% case, you should probably put the bibliography in a separate file and
-%% `\include' or `\input' it here).
 
 \end{document}

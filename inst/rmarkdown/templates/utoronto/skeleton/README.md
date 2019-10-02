@@ -1,9 +1,9 @@
-# University of Toronto RMarkdown thesis template
+# University of Toronto R Markdown thesis template
 
-This is the unofficial University of Toronto RMarkdown thesis template. You 
+This is the unofficial University of Toronto R Markdown thesis template. You 
 can find a copy of this template at https://github.com/mattwarkentin/torontodown.
 
-The template used in this package is a modified version of the TeX templated developed and maintained by Francois Pitt, which can be found at: (https://www.sgs.utoronto.ca/academic-progress/program-completion/formatting/)
+The template used in this package is a modified version of the TeX template developed and maintained by Francois Pitt, which can be found at: (https://www.sgs.utoronto.ca/academic-progress/program-completion/formatting/)
 
 To install the template, be sure you have the following:
 
@@ -12,13 +12,12 @@ To install the template, be sure you have the following:
  - [R >= 3.3.0][2]
  - [RStudio][3] (optional, but it helps)
 
-To get this document, you have opened a new Rmarkdown document from Rstudio
-using the `utoronto` template.
+To get this document, you have opened a new R Markdown document from RStudio
+using the University of Toronto Thesis template.
 
 ## Rendering
 
-To render your thesis, you can open `index.Rmd` (or whatever you named the file; so long as it agrees with the name in `_bookdown.yml`) in RStudio and then hit the
-"knit" button. Alternatively, you can use:
+To render your thesis, you can open `index.Rmd` (or whatever you named the file; so long as it agrees with the name in `_bookdown.yml`) in RStudio and then hit the "knit" button. Alternatively, you can use:
 
 ```r
 rmarkdown::render("index.Rmd")
@@ -38,13 +37,13 @@ chapters in this file and ensure that the names match the names in your folders.
 ### index.Rmd
 
 This file contains all the meta information that goes at the beginning of your
-document. Currently, we have the introduction in there, but you can leave that
+document. Currently, the introduction is included there, but you can leave that
 part blank if you wish. 
 
 ### pre/
 
 This folder contains all of the Rmd files to be included in the pretext of your
-dissertation (e.g. abstract, acknowledgements, author contributions, etc.).
+dissertation (e.g. abstract, acknowledgements, etc.).
 
 There is a slight caveat to all of these files: the very first line must be 
 plain text or the rendering will be screwed up.
@@ -61,9 +60,9 @@ Store your bibliography (as bibtex files) here.
 ### csl/
 
 Specific style files for bibliographies should be stored here. A good source for
-citation styles is https://github.com/citation-style-language/styles#readme
+citation styles is https://github.com/citation-style-language/styles
 
-### figure/ and data/
+### figures/ and data/
 
 These should be self explanatory. Store your figures and data here and reference
 them in your document. 

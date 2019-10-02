@@ -1,62 +1,39 @@
 ---
-#
-# Required Information --------------------------------------------------------
-#
+# Required Information ----
 degree: 'Doctor of Philosophy'
 department: 'Public Health Sciences'
 gradyear: '2020'
-author: 'John Doe'
-title: 'Thesis Title'
-#
-#
-# Rendering Options -----------------------------------------------------------
-#
+author: 'Jane Doe'
+title: 'An Amazing Thesis Title'
+
+# Rendering Options ----
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
 output: 
   torontodown::thesis_pdf: default
-#  torontodown::thesis_gitbook: default
-#  torontodown::thesis_word: default
-#  torontodown::thesis_epub: default
-# If you are creating a PDF you'll need to write your preliminary content here 
-# or use code similar to the line below for the files.  If you are producing in 
-# a different format than PDF, you can delete or ignore the following lines in 
-# this YAML header.
+
 bibliography: ['bib/references.bib', 'bib/thesis.bib']
-# Download your specific bibliography database file and refer to it in the line above.
 csl: csl/apa.csl
-# Download your specific csl file and refer to it in the line above.
 link-citations: yes
-# This not only makes the citations clickable, but in the HTML version, the bibliography
-# can be placed at the end of the chapter.
-# header-includes:
-#- \usepackage{tikz}
-#
-# Pretext sections ------------------------------------------------------------
-#
+
+# Pretext sections ----
 abstract: >
   `r if(knitr:::is_latex_output()) torontodown::inc("pre/00-abstract.Rmd")`
-# If you'd rather include the preliminary content in files instead of inline
-# like below, use a command like that for the abstract above.  Note that a tab is 
-# needed on the line after the >.
 acknowledgements: >
   `r if(knitr:::is_latex_output()) torontodown::inc("pre/00-acknowledgements.Rmd")`
-# preface: >  
-#  Uncomment the above to include a preface. Again, this can be rendered much
-#  like the files above.
 ---
 
 <!-- 
 Above is the YAML (YAML Ain't Markup Language) header that includes a lot of
 metadata used to produce the document.  Be careful with spacing in this header!
 
-If you'd prefer to not include a Dedication, for example, simply delete lines 17
-and 18 above or add a # before them to comment them out.  If you have other
-LaTeX packages you would like to include, delete the # before header-includes
-and list the packages after hyphens on new lines.
+If you have other LaTeX packages you would like to include, you may do so by adding header-includes to the YAML header as follows:
 
-If you'd like to include a comment that won't be produced in your resulting file
-enclose it in a block like this. 
+header-includes:
+  - \usepackage{pkgname}
+  - \usepackage[options]{pkgname2}
+
+If you'd like to include a comment that won't be produced in your resulting file enclose it in a block like this. 
 -->
 
 <!--
@@ -83,8 +60,7 @@ they are handled in the YAML above differently for the PDF version.
 -->
 
 <!-- 
-The {-} option here means that there will be no numbers on the introduction. You
-can also use {.unnumbered} so the introduction will be "Chapter 0."
+Any content included this file (like that shown below) will be included before the first chapter, and after the abstract and acknowledgements. The {-} option here means that there will be no numbers on the Introduction level-1 header (or subsequent sub-headers). You can also use {.unnumbered} so the introduction will be "Chapter 0."
 -->
 
 # Introduction {-}
@@ -93,28 +69,13 @@ Welcome to the _R Markdown_ thesis template. This template is based on (and in
 many places copied directly from) the [University of Toronto LaTeX
 template][0] and wrapped up into Matt Warkentin's [*torontodown* package][1], but
 hopefully it will provide a nicer interface for those that have never used TeX
-or LaTeX before.  Using _R Markdown_ will also allow you to easily keep track of
-your analyses in **R** chunks of code, with the resulting plots and output
-included as well.  The hope is this _R Markdown_ template gets you in the habit
+or LaTeX before.  Using _R Markdown_ will also allow you to easily keep track of your analyses in **R** chunks of code, with the resulting plots and output
+included as well. The hope is this _R Markdown_ template gets you in the habit
 of doing reproducible research, which benefits you long-term as a researcher,
-but also will greatly help anyone that is trying to reproduce or build onto your
-results down the road.
+but also will greatly help anyone that is trying to reproduce or build onto your results down the road.
 
 Hopefully, you won't have much of a learning period to go through and you will
-reap the benefits of a nicely formatted thesis.  The use of LaTeX in combination
-with _Markdown_ is more consistent than the output of a word processor, much
-less prone to corruption or crashing, and the resulting file is smaller than a
-Word file. While you may have never had problems using Word in the past, your
-thesis is likely going to be about twice as large and complex as anything you've
-written before, taxing Word's capabilities.  After working with _Markdown_ and
-**R** together for a few weeks, we are confident this will be your reporting
-style of choice going forward.
-
-<!-- 
-If you're still on the fence about using _R Markdown_, check out the resource
-for newbies available at <https://ismayc.github.io/rbasics-book/> or email us at
-<data@reed.edu>.
--->
+reap the benefits of a nicely formatted thesis.  The use of LaTeX in combination with _Markdown_ is more consistent than the output of a word processor, much less prone to corruption or crashing, and the resulting file is smaller than a Word file. While you may have never had problems using Word in the past, your thesis is likely going to be about twice as large and complex as anything you've written before, taxing Word's capabilities. After working with _Markdown_ and **R** together for a few weeks, we are confident this will be your reporting style of choice going forward.
 
 **Why use it?**
 
@@ -134,12 +95,15 @@ Having your code and commentary all together in one place has a plethora of bene
 **Who should use it?**
 
 Anyone who needs to use data analysis, math, tables, a lot of figures, complex
-cross-references, or who just cares about the final appearance of their document
-should use _R Markdown_. Of particular use should be anyone in the sciences, but
-the user-friendly nature of _Markdown_ and its ability to keep track of and
-easily include figures, automatically generate a table of contents, index,
-references, table of figures, etc. should make it of great benefit to nearly
-anyone writing a thesis project.
+cross-references, or who just cares about the final appearance of their document should use _R Markdown_. Of particular use should be anyone in the sciences, but the user-friendly nature of _Markdown_ and its ability to keep track of and easily include figures, automatically generate a table of contents, index, references, table of figures, etc. should make it of great benefit to nearly anyone writing a thesis project.
+
+In addition, since Rmd files are plain-text files (unlike Word documents), they can be tracked and version-controlled using `git`. If you are familiar with `git`, it is a piece of software that magically handles most of the tedious tasks related to version control including:
+
+- Tracking your file changes
+- Allows you to view differences between file versions
+- Allows you to revert back to previous versions
+
+Yes, this means no more having to create a new file each time you edit your thesis in order to avoid overwriting previous work.
 
 ## Objective {-}
 
@@ -175,7 +139,6 @@ venenatis adipiscing quam ut placerat. Praesent imperdiet dignissim
 cursus. Phasellus mattis nibh vitae semper pellentesque. Lorem ipsum
 dolor sit amet, consectetur adipiscing elit. Sed dignissim tellus id
 adipiscing tempus. Aenean posuere malesuada rhoncus. Ut quis elit eros.
-
 
 
 [0]: https://ctan.org/tex-archive/macros/latex/contrib/ut-thesis/

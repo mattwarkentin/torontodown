@@ -1,17 +1,10 @@
-This is a 
-\LaTeX template derived from the \beavtex template found on overleaf 
-(https://www.overleaf.com/latex/templates/oregon-state-university-thesis-and-dissertation/wnvzcdhqshxf) 
-and cloned using `git clone https://git.overleaf.com/5973847rnpkdf`
+Here you will include the abstract of your thesis. The abstract goes in this separate file so that it can be handled differently and placed in the rendered PDF document in the right location.
 
-I have made the following changes 
+It is worth noting that when you are rendering your thesis to PDF format, you can include arbitrary amounts of \LaTeX code which will be passed on to pandoc during the rendering process. This means that even though you will be able to handle the majority of your writing using simple Markdown and YAML options, if you really need to add more advanced customization, include any \LaTeX code you need. In addition, in order to keep the ugly \LaTeX code out of your thesis document, you may consider placing it in a separate file (such as `preamble.tex`) and then referencing it in the YAML header of your `index.Rmd` file with:
 
- - modified `beavtex.cls` from v1.1 to include support for verbatim font styles
-   in R code
- - stripped the template of its original content to create a pandoc template
- - placed this into a bookdown (https://bookdown.org/) framework
- - added packages latexsym, amsmath amssymb,amsthm, longtable, booktabs,
-   setspace, url, hyperref, lmodern, caption, and float
+```
+includes:
+  in_header: preamble.tex
+```
 
-This is still a WIP, but it seems to work for the moment.
-
-Zhian N. Kamvar 2016-08-25
+The \LaTeX code in `preamble.tex` will be inserted in the \LaTeX document and executed normally.

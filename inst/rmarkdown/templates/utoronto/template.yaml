@@ -1,4 +1,3 @@
 name:  University of Toronto Thesis
 description: >
- Template for creating a Thesis/Dissertation at University of Toronto using R Markdown based on the University of Toronto LaTeX template on Overleaf, Chester Ismay's thesisdown package, and the R bookdown package.
-
+ Template for creating a Thesis/Dissertation at University of Toronto using R Markdown based on the University of Toronto LaTeX template, Chester Ismay's thesisdown package, and the R bookdown package.

@@ -1,3 +1,5 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 thesis_rmd.png
+^CODE_OF_CONDUCT\.md$
+^LICENSE\.md$
