@@ -13,6 +13,11 @@ Place the new CSL file in the csl/ directory and reference it in the index.Rmd Y
 
 # References {-}
 
+\noindent
+\setlength{\parindent}{-0.20in}
+\setlength{\leftskip}{0.20in}
+\setlength{\parskip}{8pt}
+
 <div id="refs"></div>
 
 ---

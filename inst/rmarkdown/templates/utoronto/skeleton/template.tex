@@ -126,7 +126,7 @@ $endfor$
 \renewcommand\appendix{%
   \originalappendix
   \cleardoublepage
-  \addcontentsline{toc}{chapter}{\appendixname}%
+  \addcontentsline{toc}{chapter}{Appendices}%
   \addtocontents{toc}{\protect\value{tocdepth}=-1}%
   \addtocontents{atoc}{\protect\value{tocdepth}=\savedtocdepth}%
 }
@@ -264,8 +264,5 @@ $endif$
 $body$
 
 % Content from after_body will go here
-
-%% *** Set the bibliography file. ***
-\bibliography{$bibliography$}
 
 \end{document}
