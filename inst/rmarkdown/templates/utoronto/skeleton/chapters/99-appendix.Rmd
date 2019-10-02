@@ -2,7 +2,7 @@
 If you feel it necessary to include an appendix, it goes here.
 -->
 
-\begin{appendices}
+\appendix
 
 # The First Appendix
 
@@ -11,5 +11,3 @@ This first appendix includes all of the R chunks of code that were hidden throug
 # The Second Appendix, for Fun
 
 Here is a second appendix.
-
-\end{appendices}

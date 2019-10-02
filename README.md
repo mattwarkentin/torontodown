@@ -45,12 +45,11 @@ book_filename: "thesis"
 chapter_name: "Chapter "
 -rmd_files: ["index.Rmd",
 +rmd_files: ["myThesis.Rmd",
-  "chapters/01-chap1-introduction.Rmd",
-  "chapters/02-chap2-background.Rmd",
-  "chapters/03-chap3-methods.Rmd",
-  "chapters/04-chap4-results.Rmd",
-  "chapters/05-chap5-discussion.Rmd",
-  "chapters/99-references.Rmd"
+  "chapters/01-chap1.Rmd",
+  "chapters/02-chap2.Rmd",
+  "chapters/03-chap3.Rmd",
+  "chapters/98-references.Rmd",
+  "chapters/99-appendix.Rmd"
   ]
 ```
 
