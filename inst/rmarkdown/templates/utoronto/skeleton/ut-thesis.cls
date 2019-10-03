@@ -275,7 +275,7 @@
 %%%%%%%%%%%%          MAIN  CODE          %%%%%%%%%%%%
 
 
-%% ALL CONTENT ADDED BY MTW %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% START OF CONTENT ADDED BY MTW %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Added by ZNK to produce nice looking code in BeginVerbatimEnvironment
 \RequirePackage{fancyvrb}
@@ -351,6 +351,9 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 % End of ZNK add
+
+%% END OF CONTENT ADDED BY MTW %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 %%%%%%    Parameters
 

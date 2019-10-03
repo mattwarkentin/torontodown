@@ -60,6 +60,10 @@
 %%    further customize the layout and/or formatting of the document.
 
 %% Updated by MTW
+%% This code allows users to specify named documentclass options, including
+%% draft, fontsize, margins, spacing, clearpagestyle, notespacing
+%% They may also specify any other class options using the 'classoption'
+%% statement which is recycled by the for loop
 \documentclass[
 $if(draft)$
   draft,
@@ -84,7 +88,9 @@ $for(classoption)$
 $endfor$
 ]{ut-thesis}
 
-% Additional packages to work with R Markdown
+%% Additional packages and code to work with R Markdown
+%% Not sure if this should go in the class file instead
+%% Additional packages offer native support for common functionality
 \usepackage{appendix}
 \usepackage{graphicx,latexsym}
 \usepackage{amsmath}
@@ -99,18 +105,20 @@ $endfor$
 \usepackage{lmodern}
 \usepackage{float}
 \floatplacement{figure}{H}
-% End of CII addition
-\usepackage{rotating} % Package added to allow the rotation of figures and chart
-                      % on a page, {sidewaysfigure} command
+
+\usepackage{rotating} % Package added to allow the rotation of figures and chart on a page, {sidewaysfigure} command
 \usepackage{tablefootnote} % Packaged added to allow footnotes in the tabular
                            % environment, use \tablefootnote command
 
-% Added to fix issue with Pandoc
+%% Added to fix issue with Pandoc not rendering lists properly
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-% end add
+%% end add
 
-% Added by MTW to provide proper Appendix functionality
+%% Added by MTW to provide proper Appendix functionality
+%% This package produces a warning for being 'alpha'; a bit worrisome
+%% This code block creates List of Appendices, and ensures only top-level
+%% appendix titles are printed to ToC; this can be changed based on SGS guide
 \usepackage{scrwfile}
 
 \TOCclone[List of Appendices]{toc}{atoc}
@@ -155,6 +163,9 @@ $endfor$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% *** Change this example to appropriate values. ***
+
+%% Updated by MTW to change content to variables
+%% These variables are specified by the YAML header in RMarkdown file
 \degree{$degree$}
 \department{$department$}
 \gradyear{$gradyear$}
@@ -164,7 +175,9 @@ $endfor$
 %% *** NOTE ***
 %% Put here all other formatting commands that belong in the preamble.
 
-%%  Add by MTW
+%% Add by MTW
+%% This code allows users to reference additonal files in RMarkdown header
+%% containing LaTeX code; contents of said file is injected here
 $for(header-includes)$
   $header-includes$
 $endfor$
@@ -174,7 +187,9 @@ $endfor$
 
 %% List only down to subsections in the table of contents;
 %% 0=chapter, 1=section, 2=subsection, 3=subsubsection, etc.
-\setcounter{tocdepth}{$toc-depth$} %% Updated by MTW
+
+%% Updated by MTW; specified by function call in R; adjustable
+\setcounter{tocdepth}{$toc-depth$}
 
 %% Make each page fill up the entire page.
 \flushbottom
@@ -200,7 +215,7 @@ $endfor$
 %% according to SGS guidelines.
 \begin{abstract}
 \addcontentsline{toc}{chapter}{Abstract}
-$abstract$
+$abstract$ % Added by MTW
 %% *** Put your Abstract here. ***
 %% (At most 150 words for M.Sc. or 350 words for Ph.D.)
 \end{abstract}
@@ -229,7 +244,7 @@ $abstract$
 %% This generates an "acknowledgements" section, if needed
 %% (uncomment to have it appear in the document).
 \begin{acknowledgements}
-$acknowledgements$
+$acknowledgements$ % Added by MTW
 %% *** Put your Acknowledgements here. ***
 \end{acknowledgements}
 
@@ -237,6 +252,10 @@ $acknowledgements$
 %% Table of Contents
 \tableofcontents
 
+
+%% Added by MTW
+%% Allows users to toggle whether Lists of Tables/Figures are included
+%% in the TOC; also whether to include List of Appendices (loa)
 $if(listsintoc)$
   %% List of Tables
   \addcontentsline{toc}{chapter}{\listtablename}
@@ -260,7 +279,7 @@ $endif$
 
 % Content from before_body will go here
 
-% Body
+% Body content of the RMarkdown injected here
 $body$
 
 % Content from after_body will go here
