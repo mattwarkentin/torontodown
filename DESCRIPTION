@@ -7,14 +7,18 @@ Description: Using the bookdown package and LaTeX thesis templates from
     University of Toronto, this package aims to encourage reproducible research using
     simple Markdown syntax while embedding all of the R code to produce plots
     and analyses as well. This package is based on Chester Ismay's thesisdown and Zhian Kavmar's beaverdown.
-Depends:
+Depends: 
     R (>= 3.5.3),
-    devtools,
-    dplyr,
-    ggplot2,
-    bookdown,
-    knitr
-Imports: yaml
+    knitr,
+    bookdown
+Imports: 
+    yaml,
+    fs,
+    glue,
+    stringr,
+    clipr,
+    cli,
+    rstudioapi
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

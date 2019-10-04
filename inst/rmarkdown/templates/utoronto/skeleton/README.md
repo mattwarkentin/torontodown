@@ -9,7 +9,7 @@ To install the template, be sure you have the following:
 
  - [pandoc][0]
  - [LaTeX][1]
- - [R >= 3.3.0][2]
+ - [R >= 3.5.3][2]
  - [RStudio][3] (optional, but it helps)
 
 To get this document, you have opened a new R Markdown document from RStudio

@@ -1,0 +1,5 @@
+Title: University of Toronto Thesis
+Binding: thesis_skeleton
+OpenFiles: index.Rmd,_bookdown.yml
+Subtitle: Create a new R project to manage a University of Toronto Thesis using bookdown and thesisdown
+Icon: /Users/Matt/Documents/GitHub_ROOT/pkgs/torontodown/inst/rstudio/templates/project/book.png
