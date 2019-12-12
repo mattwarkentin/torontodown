@@ -3,3 +3,5 @@
 thesis_rmd.png
 ^CODE_OF_CONDUCT\.md$
 ^LICENSE\.md$
+^appveyor\.yml$
+^\.travis\.yml$

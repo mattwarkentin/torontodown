@@ -1,6 +1,8 @@
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/mattwarkentin/torontodown?branch=master&svg=true)](https://ci.appveyor.com/project/mattwarkentin/torontodown)
+[![Travis build status](https://travis-ci.com/mattwarkentin/torontodown.svg?branch=master)](https://travis-ci.com/mattwarkentin/torontodown)
 <!-- badges: end -->
 
 ---
