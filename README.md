@@ -4,7 +4,6 @@
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/mattwarkentin/torontodown?branch=master&svg=true)](https://ci.appveyor.com/project/mattwarkentin/torontodown)
 [![Travis build status](https://travis-ci.com/mattwarkentin/torontodown.svg?branch=master)](https://travis-ci.com/mattwarkentin/torontodown)
 <!-- badges: end -->
-
 ---
 
 # torontodown <img src='man/figures/logo.png' align="right" height="138.5" />
@@ -21,39 +20,22 @@ To install and use `torontodown` and use it for your dissertation/thesis, you wi
 
  - [pandoc][0]
  - [LaTeX][1]
- - [R >= 3.3.0][2]
+ - [R >= 3.5][2]
  - [RStudio][3] (optional, but it helps)
 
 Open Rstudio and type:
 
-
 ```r
-if (!require("devtools")) install.packages("devtools", repos = "http://cran.rstudio.org")
-devtools::install_github("mattwarkentin/torontodown")
+if (!require("remotes")) install.packages("remotes", repos = "http://cran.rstudio.org")
+remotes::install_github("mattwarkentin/torontodown")
 ```
 
-To use it, open Rstudio, click on **File > New File > Rmarkdown ...** and then
-select the **University of Toronto** from the **Templates**.
+To use it, open Rstudio, click on **File > New Project... > New Directory** and then select the **University of Toronto Thesis** from the **Projects**.
 
 <!--replace image with new one-->
 <!--![New R Markdown](thesis_rmd.png)-->
 
-Make sure to give your thesis a title and save it to the correct path. RStudio
-will send you to that directory and then you should open `_bookdown.yml` and
-edit the first Rmd file to be the name of your project:
-
-```diff
-book_filename: "thesis"
-chapter_name: "Chapter "
--rmd_files: ["index.Rmd",
-+rmd_files: ["myThesis.Rmd",
-  "chapters/01-chap1.Rmd",
-  "chapters/02-chap2.Rmd",
-  "chapters/03-chap3.Rmd",
-  "chapters/98-references.Rmd",
-  "chapters/99-appendix.Rmd"
-  ]
-```
+Make sure to give your thesis a title and save it to the correct path. RStudio will send you to that directory and should open `index.Rmd` and `_bookdown.yml`.
 
 Instructions for editing are in the [README file][6].
 
@@ -102,4 +84,4 @@ Note that this will currently only **Knit** if you name the directory `index` as
  [3]: https://rstudio.org
  [4]: https://github.com/ismayc/thesisdown
  [5]: https://github.com/zkamvar/beaverdown/
- [6]: https://github.com/mattwarkentin/torontodown/tree/master/inst/rmarkdown/templates/utoronto/skeleton#readme
+ [6]: https://github.com/mattwarkentin/torontodown/tree/master/inst/rstudio/templates/project/resources#readme

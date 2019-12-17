@@ -8,7 +8,7 @@ Description: Using the bookdown package and LaTeX thesis templates from
     simple Markdown syntax while embedding all of the R code to produce plots
     and analyses as well. This package is based on Chester Ismay's thesisdown and Zhian Kavmar's beaverdown.
 Depends: 
-    R (>= 3.6),
+    R (>= 3.5),
     knitr,
     bookdown
 Imports: 
