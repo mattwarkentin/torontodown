@@ -2,11 +2,13 @@
 If you feel it necessary to include an appendix, it goes here.
 -->
 
-\appendix
+```{r app, echo=FALSE}
+torontodown::here_app()
+```
 
 # The First Appendix
 
-This first appendix includes all of the R chunks of code that were hidden throughout the document (using the `include = FALSE` chunk tag) to help with readibility and/or setup.
+This is the first appendix of your dissertation.
 
 # The Second Appendix, for Fun
 

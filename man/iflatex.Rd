@@ -17,7 +17,7 @@ Return latex control text if rendering latex
 }
 \examples{
 \dontrun{
-iflatex("\\vspace*{\\fill}")
+iflatex("\\\\vspace*{\\\\fill}")
 }
 
 }

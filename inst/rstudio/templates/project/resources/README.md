@@ -1,7 +1,6 @@
 # University of Toronto R Markdown thesis template
 
-This is the unofficial University of Toronto R Markdown thesis template. You 
-can find a copy of this template at https://github.com/mattwarkentin/torontodown.
+This is the unofficial University of Toronto R Markdown thesis template. You can find a copy of this template at https://github.com/mattwarkentin/torontodown.
 
 The template used in this package is a modified version of the TeX template developed and maintained by Francois Pitt, which can be found at: (https://www.sgs.utoronto.ca/academic-progress/program-completion/formatting/)
 
@@ -9,15 +8,15 @@ To install the template, be sure you have the following:
 
  - [pandoc][0]
  - [LaTeX][1]
- - [R >= 3.5.3][2]
+ - [R >= 3.5][2]
  - [RStudio][3] (optional, but it helps)
 
-To get this document, you have opened a new R Markdown document from RStudio
-using the University of Toronto Thesis template.
+To get this document, you have opened a **New Project** from RStudio
+using the ***University of Toronto Thesis*** template.
 
 ## Rendering
 
-To render your thesis, you can open `index.Rmd` (or whatever you named the file; so long as it agrees with the name in `_bookdown.yml`) in RStudio and then hit the "knit" button. Alternatively, you can use:
+To render your thesis, you can open `index.Rmd` (or whatever you name the file; so long as it agrees with the name in `_bookdown.yml`) in RStudio and then hit the "knit" button. Alternatively, you can use:
 
 ```r
 rmarkdown::render("index.Rmd")
@@ -50,8 +49,7 @@ plain text or the rendering will be screwed up.
 
 ### chapters/
 
-This folder contains the Rmd files for each chapter in your dissertation. Modify
-as you will.
+This folder contains the Rmd files for each chapter in your dissertation. Modify as you will.
 
 ### bib/
 
@@ -59,13 +57,11 @@ Store your bibliography (as bibtex files) here.
 
 ### csl/
 
-Specific style files for bibliographies should be stored here. A good source for
-citation styles is https://github.com/citation-style-language/styles
+Specific style files for bibliographies should be stored here. A good source for citation styles is https://github.com/citation-style-language/styles
 
 ### figures/ and data/
 
-These should be self explanatory. Store your figures and data here and reference
-them in your document. 
+These should be self explanatory. Store your figures and data here and reference them in your document. 
 
 
  [0]: http://pandoc.org/

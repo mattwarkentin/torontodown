@@ -1,0 +1,36 @@
+#' @title Place thesis components.
+#'
+#' @description Functions for placing dissertation components. These functions write LaTeX and HTML code behind-the-scenes so you don't have to.
+#'
+#' @return NULL
+#'
+#' @examples
+#' \dontrun{
+#' here_ref()
+#' here_app()
+#' }
+#'
+#' @rdname here
+#' @export
+
+here_ref <- function() {
+  if (knitr::is_latex_output()) {
+    knitr::raw_latex('\noindent')
+    knitr::raw_latex('\\setlength{\\parindent}{-0.20in}')
+    knitr::raw_latex('\\setlength{\\leftskip}{0.20in}')
+    knitr::raw_latex('\\setlength{\\parskip}{8pt}')
+
+    knitr::asis_output('<div id="refs"></div>')
+  } else if (knitr::is_html_output()) {
+    knitr::asis_output('<div id="refs"></div>')
+  }
+}
+
+#' @name here
+#' @export
+
+here_app <- function() {
+  if (knitr::is_latex_output()) {
+    knitr::raw_latex('\\appendix')
+  }
+}
