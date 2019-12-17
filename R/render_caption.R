@@ -6,7 +6,9 @@
 #'
 #' @param caption the markdown-formatted text you want to render as a figure
 #'   caption.
-#' @param figname the name of the figure (as to not crowd the )
+#' @param figname the name of the figure (as to not crowd the ).
+#' @param index Index file name.
+#' @param to Format.
 #'
 #' @return a figure caption rendered in LaTeX
 #' @export
@@ -20,14 +22,13 @@
 #'
 #' # Setup for the example
 #' # Note that this will already be set for you when you run the document
-#' rootdir <- find.package("beaverdown")
-#' rootdir <- paste0(rootdir, "/rmarkdown/templates/oregonstate/skeleton/")
+#' rootdir <- find.package("torontodown")
+#' rootdir <- paste0(rootdir, "/rstudio/templates/project/resources/")
 #' knitr::opts_knit$set(root.dir = rootdir)
-#'
 #'
 #' caption <- "This is some *text* to use as a caption [@angel2000]!"
 #' # Make sure to set your index to whatever your project is called!
-#' render_caption(caption, index = "skeleton.Rmd")
+#' render_caption(caption, index = "index.Rmd")
 #'
 #' @importFrom yaml yaml.load
 render_caption <- function(caption, figname = "fig1", index = "index.Rmd", to = "latex"){
@@ -44,9 +45,9 @@ render_caption <- function(caption, figname = "fig1", index = "index.Rmd", to = 
 
 #' Process citations in a text formatted with markdown
 #'
-#' @param caption text formatted with markdown
-#' @param yml a list of yaml metadata
-#' @param figname the name of the output file
+#' @param caption text formatted with markdown.
+#' @param yml a list of yaml metadata.
+#' @param figname the name of the output file.
 #' @param to the output format. Defaults to "latex". Could also be "html".
 #'   "markdown" does nothing useful.
 #'
@@ -58,14 +59,16 @@ render_caption <- function(caption, figname = "fig1", index = "index.Rmd", to = 
 #' @examples
 #' # Setup for the example
 #' # Note that this will already be set for you when you run the document
-#' rootdir <- find.package("beaverdown")
-#' rootdir <- paste0(rootdir, "/rmarkdown/templates/oregonstate/skeleton/")
+#'
+#' rootdir <- find.package("torontodown")
+#' rootdir <- paste0(rootdir, "/rstudio/templates/project/resources/")
 #' bib <- file.path(rootdir, c("bib/references.bib", "bib/thesis.bib"))
 #' bib <- paste(bib, collapse = "\n    ")
 #' csl <- file.path(rootdir, "csl/apa.csl")
 #' txt <- "**Hey!** This is a citation from @angel2000."
 #' yml <- list(bibliography = bib, csl = csl, `link-citations` = TRUE)
 #' process_citations(txt, yml)
+#'
 process_citations <- function(caption, yml, figname = "fig1", to = "latex"){
   tmpdir <- tempdir()
   to     <- match.arg(to, c("latex", "markdown", "html"))

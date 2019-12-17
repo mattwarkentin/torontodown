@@ -4,7 +4,11 @@
 #'
 #' @param name Name of file.
 #'
-#' @importFrom assertthat assert_that
+#' @examples
+#'
+#' \dontrun{
+#' new_chapter('sweet-chapter')
+#' }
 #'
 #' @export
 

@@ -1,6 +1,6 @@
 #' Return latex control text if rendering latex
 #'
-#' @param txt
+#' @param txt Text.
 #'
 #' @return a string
 #' @export

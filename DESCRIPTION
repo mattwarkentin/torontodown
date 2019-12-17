@@ -8,19 +8,23 @@ Description: Using the bookdown package and LaTeX thesis templates from
     simple Markdown syntax while embedding all of the R code to produce plots
     and analyses as well. This package is based on Chester Ismay's thesisdown and Zhian Kavmar's beaverdown.
 Depends: 
-    R (>= 3.5.3),
+    R (>= 3.6),
     knitr,
     bookdown
 Imports: 
     yaml,
     fs,
     glue,
+    here,
     stringr,
     clipr,
     cli,
-    rstudioapi
+    rstudioapi,
+    assertthat
 License: MIT + file LICENSE
+URL: https://github.com/mattwarkentin/torontodown
+BugReports: https://github.com/mattwarkentin/torontodown/issues
 Encoding: UTF-8
 LazyData: true
 SystemRequirements: pandoc (>= 1.18) - http://pandoc.org
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.1

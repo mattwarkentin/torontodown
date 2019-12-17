@@ -12,3 +12,10 @@ new_chapter(name = NULL)
 \description{
 Create a new chapter in your thesis using a R Markdown file
 }
+\examples{
+
+\dontrun{
+new_chapter('sweet-chapter')
+}
+
+}

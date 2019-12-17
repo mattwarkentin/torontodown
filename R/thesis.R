@@ -32,7 +32,7 @@ thesis_pdf <- function(toc = TRUE, toc_depth = 3, ...){
   base$knitr$opts_chunk$out.width <- "80%"
   base$knitr$opts_knit$root.dir   <- getwd()
   # Not sure if needed?
-  base$knitr$knit_hooks$plot <- knitr:::hook_plot_tex
+  base$knitr$knit_hooks$plot <- knitr::hook_plot_tex
 
   base
 

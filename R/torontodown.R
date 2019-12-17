@@ -9,6 +9,7 @@
 #' Creates an R Markdown thesis template as a PDF
 #' @section thesis_word:
 #' Creates an R Markdown thesis template as a Microsoft Word document
+#' @import bookdown knitr
 #' @docType package
 #' @name torontodown
 NULL

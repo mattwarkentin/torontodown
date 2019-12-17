@@ -7,11 +7,11 @@
 process_citations(caption, yml, figname = "fig1", to = "latex")
 }
 \arguments{
-\item{caption}{text formatted with markdown}
+\item{caption}{text formatted with markdown.}
 
-\item{yml}{a list of yaml metadata}
+\item{yml}{a list of yaml metadata.}
 
-\item{figname}{the name of the output file}
+\item{figname}{the name of the output file.}
 
 \item{to}{the output format. Defaults to "latex". Could also be "html".
 "markdown" does nothing useful.}
@@ -25,14 +25,16 @@ Process citations in a text formatted with markdown
 \examples{
 # Setup for the example
 # Note that this will already be set for you when you run the document
-rootdir <- find.package("beaverdown")
-rootdir <- paste0(rootdir, "/rmarkdown/templates/oregonstate/skeleton/")
+
+rootdir <- find.package("torontodown")
+rootdir <- paste0(rootdir, "/rstudio/templates/project/resources/")
 bib <- file.path(rootdir, c("bib/references.bib", "bib/thesis.bib"))
-bib <- paste(bib, collapse = "\\n    ")
+bib <- paste(bib, collapse = "\n    ")
 csl <- file.path(rootdir, "csl/apa.csl")
 txt <- "**Hey!** This is a citation from @angel2000."
 yml <- list(bibliography = bib, csl = csl, `link-citations` = TRUE)
 process_citations(txt, yml)
+
 }
 \seealso{
 \code{\link{render_caption}}

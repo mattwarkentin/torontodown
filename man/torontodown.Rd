@@ -3,7 +3,6 @@
 \docType{package}
 \name{torontodown}
 \alias{torontodown}
-\alias{torontodown-package}
 \title{torontodown: A package for creating Masters and Doctoral theses
 using R Markdown}
 \description{
