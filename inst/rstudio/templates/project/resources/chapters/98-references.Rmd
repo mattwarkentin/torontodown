@@ -1,23 +1,6 @@
-\cleardoublepage
-
-<!-- 
-If you'd like to change the name of the bibliography to something else,
-delete "References" and replace it.
-
-If it helps you stay organized, you may store your references in separate bib files, by chapter, perhaps. Just make sure you include the bib files in the YAML header in the index.Rmd file. We recommend using a citation manager to produce the .bib files. I use BibDesk on my Macbook; JabRef is an alternative for Windows users.
-
-If you want to change the citation style and referencing format, you can download the citation style language (CSL) format from this link: https://github.com/citation-style-language/styles
-
-Place the new CSL file in the csl/ directory and reference it in the index.Rmd YAML header. Citations are handled using pandoc-citeproc
--->
 
 # References {-}
 
-```{r refs, echo=FALSE}
+```{r references, echo=FALSE}
 torontodown::here_ref()
 ```
-
----
-nocite: | 
-  @angel2000, @angel2001, @angel2002a
-...

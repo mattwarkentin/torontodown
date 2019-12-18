@@ -53,11 +53,13 @@ This folder contains the Rmd files for each chapter in your dissertation. Modify
 
 ### bib/
 
-Store your bibliography (as bibtex files) here.
+Store your bibliography (as bibtex files) here. If it helps you stay organized, you may store your references in separate bib files, by chapter, perhaps.
 
 ### csl/
 
-Specific style files for bibliographies should be stored here. A good source for citation styles is https://github.com/citation-style-language/styles
+Specific style files for bibliographies should be stored here. If you want to change the citation style, you can download the citation style language (CSL) format from this link: https://github.com/citation-style-language/styles
+
+Place the new CSL file in the csl/ directory and reference it in the index.Rmd YAML header. Citations are handled using pandoc-citeproc
 
 ### figures/ and data/
 

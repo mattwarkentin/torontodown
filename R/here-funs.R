@@ -15,7 +15,8 @@
 
 here_ref <- function() {
   if (knitr::is_latex_output()) {
-    knitr::raw_latex('\noindent')
+    knitr::raw_latex('\\cleardoublepage')
+    knitr::raw_latex('\\noindent')
     knitr::raw_latex('\\setlength{\\parindent}{-0.20in}')
     knitr::raw_latex('\\setlength{\\leftskip}{0.20in}')
     knitr::raw_latex('\\setlength{\\parskip}{8pt}')

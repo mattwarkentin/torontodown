@@ -1,8 +1,5 @@
-<!--
-If you feel it necessary to include an appendix, it goes here.
--->
 
-```{r app, echo=FALSE}
+```{r appendix, echo=FALSE}
 torontodown::here_app()
 ```
 

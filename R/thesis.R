@@ -18,13 +18,15 @@
 #' }
 thesis_pdf <- function(toc = TRUE, toc_depth = 3, ...){
 
-  base <- bookdown::pdf_book(template = "template.tex",
+  base <- bookdown::pdf_book(
+    template = "template/template.tex",
     toc = toc,
     toc_depth = toc_depth,
     highlight = "pygments",
     keep_tex = TRUE,
     pandoc_args = "--top-level-division=chapter",
-    ...)
+    ...
+    )
 
   # Mostly copied from knitr::render_sweave
   base$knitr$opts_chunk$comment   <- NA
