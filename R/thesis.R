@@ -19,10 +19,10 @@
 thesis_pdf <- function(toc = TRUE, toc_depth = 3, ...){
 
   base <- bookdown::pdf_book(
-    template = "template/template.tex",
+    template = 'ut-thesis.tex',
     toc = toc,
     toc_depth = toc_depth,
-    highlight = "pygments",
+    highlight = 'pygments',
     keep_tex = TRUE,
     pandoc_args = "--top-level-division=chapter",
     ...
