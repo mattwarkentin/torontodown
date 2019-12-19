@@ -278,10 +278,18 @@ $endif$
 %% *** Chapters go here. ***
 
 % Content from before_body will go here
+$for(include-before)$
+$include-before$
+
+$endfor$
 
 % Body content of the RMarkdown injected here
 $body$
 
 % Content from after_body will go here
+$for(include-after)$
+$include-after$
+
+$endfor$
 
 \end{document}

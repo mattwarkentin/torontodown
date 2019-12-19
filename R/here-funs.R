@@ -15,13 +15,15 @@
 
 here_ref <- function() {
   if (knitr::is_latex_output()) {
-    knitr::raw_latex('\\cleardoublepage')
-    knitr::raw_latex('\\noindent')
-    knitr::raw_latex('\\setlength{\\parindent}{-0.20in}')
-    knitr::raw_latex('\\setlength{\\leftskip}{0.20in}')
-    knitr::raw_latex('\\setlength{\\parskip}{8pt}')
-
-    knitr::asis_output('<div id="refs"></div>')
+    x <- glue::glue(
+      '\\noindent',
+      '\\setlength{\\parindent}{-0.20in}',
+      '\\setlength{\\leftskip}{0.20in}',
+      '\\setlength{\\parskip}{8pt}',
+      '<div id="refs"></div>',
+      .sep = '\n', .open = '<<', .close = '>>'
+    )
+    knitr::asis_output(x)
   } else if (knitr::is_html_output()) {
     knitr::asis_output('<div id="refs"></div>')
   }
