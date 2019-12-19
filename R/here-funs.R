@@ -24,7 +24,7 @@ here_ref <- function() {
       .sep = '\n', .open = '<<', .close = '>>'
     )
     knitr::asis_output(x)
-  } else if (knitr::is_html_output()) {
+  } else {
     knitr::asis_output('<div id="refs"></div>')
   }
 }
