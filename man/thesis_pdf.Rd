@@ -4,12 +4,10 @@
 \alias{thesis_pdf}
 \title{Creates an R Markdown PDF Thesis document}
 \usage{
-thesis_pdf(toc = TRUE, toc_depth = 3, ...)
+thesis_pdf(toc = TRUE, ...)
 }
 \arguments{
 \item{toc}{A Boolean (TRUE or FALSE) specifying where table of contents should be created}
-
-\item{toc_depth}{A positive integer}
 
 \item{...}{arguments to be passed to \code{rmarkdown::\link[rmarkdown]{pdf_document}}}
 }

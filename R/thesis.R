@@ -6,7 +6,6 @@
 #' @export
 #'
 #' @param toc A Boolean (TRUE or FALSE) specifying where table of contents should be created
-#' @param toc_depth A positive integer
 #' @param ... arguments to be passed to \code{rmarkdown::\link[rmarkdown]{pdf_document}}
 #'
 #' @return A modified \code{pdf_document} based on the University of Toronto Thesis LaTeX
@@ -16,15 +15,14 @@
 #' \dontrun{
 #'  output: torontodown::thesis_pdf
 #' }
-thesis_pdf <- function(toc = TRUE, toc_depth = 3, ...){
+thesis_pdf <- function(toc = TRUE, ...){
 
   base <- bookdown::pdf_book(
-    template = 'ut-thesis.tex',
+    template = here::here('templates', 'ut-thesis.tex'),
     toc = toc,
-    toc_depth = toc_depth,
     highlight = 'pygments',
     keep_tex = TRUE,
-    pandoc_args = "--top-level-division=chapter",
+    pandoc_args = c("--top-level-division=chapter", "-V", glue::glue("ut-class=", here::here("templates", "ut-thesis"))),
     ...
     )
 
@@ -54,6 +52,7 @@ thesis_pdf <- function(toc = TRUE, toc_depth = 3, ...){
 thesis_gitbook <- function(){
 
   base <- bookdown::gitbook(
+    template = here::here('templates', 'ut-thesis.html'),
     split_by = "chapter+number",
     config = list(toc = list(collapse = "section",
       before = '<li><a href="./"></a></li>',
@@ -85,7 +84,9 @@ thesis_gitbook <- function(){
 #' }
 thesis_word <- function(){
 
-  base <- bookdown::word_document2()
+  base <- bookdown::word_document2(
+    reference_docx = here::here('templates', 'ut-thesis.docx')
+  )
 
   # Mostly copied from knitr::render_sweave
   base$knitr$opts_chunk$comment   <- NA
