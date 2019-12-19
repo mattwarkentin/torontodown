@@ -30,22 +30,17 @@ The following components are ones you should edit to customize your thesis:
 
 ### _bookdown.yml
 
-This is the main configuration file for your thesis. Arrange the order of your
-chapters in this file and ensure that the names match the names in your folders.
+This is the main configuration file for your thesis. Arrange the order of your chapters in this file and ensure that the names match the names in your folders.
 
 ### index.Rmd
 
-This file contains all the meta information that goes at the beginning of your
-document. Currently, the introduction is included there, but you can leave that
-part blank if you wish. 
+This file contains all the meta information that goes at the beginning of your document. Currently, the introduction is included there, but you can leave that part blank if you wish. 
 
 ### pre/
 
-This folder contains all of the Rmd files to be included in the pretext of your
-dissertation (e.g. abstract, acknowledgements, etc.).
+This folder contains all of the Rmd files to be included in the pretext of your dissertation (e.g. abstract, acknowledgements, etc.).
 
-There is a slight caveat to all of these files: the very first line must be 
-plain text or the rendering will be screwed up.
+There is a slight caveat to all of these files: the very first line must be  plain text or the rendering will be screwed up.
 
 ### chapters/
 

@@ -118,5 +118,5 @@ If you look at the YAML header at the top of the main .Rmd file you can see that
 
 ## Anything else?
 
-If you'd like to see examples of other things in this template, please contact the Data @ Reed team (email <data@reed.edu>) with your suggestions. We love to see people using _R Markdown_ for their theses, and are happy to help.
+If you'd like to see examples of other things in this template, please contact me at <warkentin@lunenfeld.ca> with your suggestions. Also, if you would like to report a bug or suggest a new feature, please submit an Issue [here](https://github.com/mattwarkentin/torontodown/issues).
 
