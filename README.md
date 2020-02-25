@@ -1,8 +1,10 @@
 
 <!-- badges: start -->
 [![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
-[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/mattwarkentin/torontodown?branch=master&svg=true)](https://ci.appveyor.com/project/mattwarkentin/torontodown)
-[![Travis build status](https://travis-ci.com/mattwarkentin/torontodown.svg?branch=master)](https://travis-ci.com/mattwarkentin/torontodown)
+[![R build status](https://github.com/mattwarkentin/torontodown/workflows/R-CMD-check/badge.svg)](https://github.com/mattwarkentin/torontodown/actions?workflow=R-CMD-check)
+[![](https://img.shields.io/github/last-commit/mattwarkentin/torontodown.svg)](https://github.com/mattwarkentin/torontodown/commits/master)
+![GitHub repo size](https://img.shields.io/github/repo-size/mattwarkentin/torontodown)
+
 <!-- badges: end -->
 ---
 

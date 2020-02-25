@@ -6,3 +6,4 @@ thesis_rmd.png
 ^appveyor\.yml$
 ^\.travis\.yml$
 university-toronto-templates/
+.github/

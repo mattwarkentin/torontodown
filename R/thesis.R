@@ -5,7 +5,8 @@
 #'
 #' @export
 #'
-#' @param toc A Boolean (TRUE or FALSE) specifying where table of contents should be created
+#' @param toc TRUE to include a table of contents in the output.
+#' @param highlight Syntax highlighting style.
 #' @param ... arguments to be passed to \code{rmarkdown::\link[rmarkdown]{pdf_document}}
 #'
 #' @return A modified \code{pdf_document} based on the University of Toronto Thesis LaTeX
@@ -15,13 +16,12 @@
 #' \dontrun{
 #'  output: torontodown::thesis_pdf
 #' }
-thesis_pdf <- function(toc = TRUE, ...){
+thesis_pdf <- function(toc = TRUE, highlight = 'pygments', ...){
 
   base <- bookdown::pdf_book(
     template = here::here('templates', 'ut-thesis.tex'),
     toc = toc,
-    highlight = 'pygments',
-    keep_tex = TRUE,
+    highlight = highlight,
     pandoc_args = c("--top-level-division=chapter", "-V", glue::glue("ut-class=", here::here("templates", "ut-thesis"))),
     ...
     )

@@ -4,10 +4,12 @@
 \alias{thesis_pdf}
 \title{Creates an R Markdown PDF Thesis document}
 \usage{
-thesis_pdf(toc = TRUE, ...)
+thesis_pdf(toc = TRUE, highlight = "pygments", ...)
 }
 \arguments{
-\item{toc}{A Boolean (TRUE or FALSE) specifying where table of contents should be created}
+\item{toc}{TRUE to include a table of contents in the output.}
+
+\item{highlight}{Syntax highlighting style.}
 
 \item{...}{arguments to be passed to \code{rmarkdown::\link[rmarkdown]{pdf_document}}}
 }
