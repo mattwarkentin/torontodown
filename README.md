@@ -22,7 +22,7 @@ To install and use `torontodown` and use it for your dissertation/thesis, you wi
 
  - [pandoc][0]
  - [LaTeX][1]
- - [R >= 3.5][2]
+ - [R >= 3.6][2]
  - [RStudio][3] (optional, but it helps)
 
 Open Rstudio and type:
