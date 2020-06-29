@@ -10,7 +10,7 @@
 
 # torontodown <img src='man/figures/logo.png' align="right" height="138.5" />
 
-This project is a modified version Chester Ismay's [thesisdown][4] and Zhian Kavmar's [beaverdown][5] package to provide support for University of Toronto's thesis formatting guidelines.
+This project is a modified version Chester Ismay's [thesisdown][4] and Zhian Kavmar's [beaverdown][5] package to provide support for University of Toronto's SGS thesis formatting guidelines.
 
 Currently, the PDF version is fully functional. All other versions are derived from `thesisdown` and are not guaranteed to work.
 
