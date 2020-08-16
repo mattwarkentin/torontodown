@@ -18,6 +18,8 @@
 #' }
 thesis_pdf <- function(toc = TRUE, highlight = 'pygments', ...){
 
+  options(bookdown.render.file_scope = FALSE)
+
   base <- bookdown::pdf_book(
     template = here::here('templates', 'ut-thesis.tex'),
     toc = toc,
@@ -50,6 +52,8 @@ thesis_pdf <- function(toc = TRUE, highlight = 'pygments', ...){
 #'  output: torontodown::thesis_gitbook
 #' }
 thesis_gitbook <- function(){
+
+  options(bookdown.render.file_scope = FALSE)
 
   base <- bookdown::gitbook(
     template = here::here('templates', 'ut-thesis.html'),
@@ -84,6 +88,8 @@ thesis_gitbook <- function(){
 #' }
 thesis_word <- function(){
 
+  options(bookdown.render.file_scope = FALSE)
+
   base <- bookdown::word_document2(
     reference_docx = here::here('templates', 'ut-thesis.docx')
   )
@@ -110,6 +116,8 @@ thesis_word <- function(){
 #'  output: torontodown::thesis_epub
 #' }
 thesis_epub <- function(){
+
+  options(bookdown.render.file_scope = FALSE)
 
   base <- bookdown::epub_book()
 

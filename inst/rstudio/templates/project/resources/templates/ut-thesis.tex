@@ -106,6 +106,16 @@ $endfor$
 \usepackage{float}
 \floatplacement{figure}{H}
 
+%% Required by pandoc now
+$if(csl-refs)$
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newenvironment{cslreferences}%
+  {$if(csl-hanging-indent)$\setlength{\parindent}{0pt}%
+  \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces$endif$}%
+  {\par}
+$endif$
+
 \usepackage{rotating} % Package added to allow the rotation of figures and chart on a page, {sidewaysfigure} command
 \usepackage{tablefootnote} % Packaged added to allow footnotes in the tabular
                            % environment, use \tablefootnote command
