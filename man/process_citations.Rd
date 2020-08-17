@@ -23,6 +23,7 @@ formatted text with rendered citations
 Process citations in a text formatted with markdown
 }
 \examples{
+\dontrun{
 # Setup for the example
 # Note that this will already be set for you when you run the document
 
@@ -34,6 +35,7 @@ csl <- file.path(rootdir, "csl/apa.csl")
 txt <- "**Hey!** This is a citation from @angel2000."
 yml <- list(bibliography = bib, csl = csl, `link-citations` = TRUE)
 process_citations(txt, yml)
+}
 
 }
 \seealso{

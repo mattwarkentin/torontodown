@@ -30,7 +30,7 @@ This works by utilizing the \pkg{knitr} function
   captions, which are not automatically rendered.
 }
 \examples{
-
+\dontrun{
 # Setup for the example
 # Note that this will already be set for you when you run the document
 rootdir <- find.package("torontodown")
@@ -40,6 +40,7 @@ knitr::opts_knit$set(root.dir = rootdir)
 caption <- "This is some *text* to use as a caption [@angel2000]!"
 # Make sure to set your index to whatever your project is called!
 render_caption(caption, index = "index.Rmd")
+}
 
 }
 \seealso{

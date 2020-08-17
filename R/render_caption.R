@@ -19,7 +19,7 @@
 #' @seealso \code{\link{process_citations}}
 #'
 #' @examples
-#'
+#' \dontrun{
 #' # Setup for the example
 #' # Note that this will already be set for you when you run the document
 #' rootdir <- find.package("torontodown")
@@ -29,8 +29,10 @@
 #' caption <- "This is some *text* to use as a caption [@angel2000]!"
 #' # Make sure to set your index to whatever your project is called!
 #' render_caption(caption, index = "index.Rmd")
+#' }
 #'
 #' @importFrom yaml yaml.load
+
 render_caption <- function(caption, figname = "fig1", index = "index.Rmd", to = "latex"){
   the_root  <- knitr::opts_knit$get("root.dir")
   yml       <- readLines(file.path(the_root, index))
@@ -57,6 +59,7 @@ render_caption <- function(caption, figname = "fig1", index = "index.Rmd", to = 
 #' @seealso \code{\link{render_caption}}
 #'
 #' @examples
+#' \dontrun{
 #' # Setup for the example
 #' # Note that this will already be set for you when you run the document
 #'
@@ -68,6 +71,7 @@ render_caption <- function(caption, figname = "fig1", index = "index.Rmd", to = 
 #' txt <- "**Hey!** This is a citation from @angel2000."
 #' yml <- list(bibliography = bib, csl = csl, `link-citations` = TRUE)
 #' process_citations(txt, yml)
+#' }
 #'
 process_citations <- function(caption, yml, figname = "fig1", to = "latex"){
   tmpdir <- tempdir()
