@@ -1,0 +1,11 @@
+reference:
+- title: "Thesis Formats"
+- contents:
+  - starts_with("thesis")
+- title: "Miscellaneous"
+- contents:
+  - new_chapter
+  - process_citations
+  - render_caption
+  - starts_with("here")
+  - inc

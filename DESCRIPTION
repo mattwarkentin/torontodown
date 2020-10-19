@@ -2,7 +2,7 @@ Package: torontodown
 Title: An R Markdown thesis template for University of Toronto using the bookdown package
 Version: 0.1.0
 Authors@R: c(person(c("Matthew", "T."), "Warkentin", email = "matt.warkentin@mail.utoronto.ca", role = c("aut", "cre")),
-    person("Francois", "Pitt", email = "fpitt@cs.utoronto.ca", role = c("aut", "ccp")))
+    person("Francois", "Pitt", email = "fpitt@cs.utoronto.ca", role = c("ctb")))
 Description: Using the bookdown package and LaTeX thesis templates from
     University of Toronto, this package aims to encourage reproducible research using
     simple Markdown syntax while embedding all of the R code to produce plots

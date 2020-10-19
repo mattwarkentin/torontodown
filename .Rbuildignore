@@ -7,3 +7,6 @@ thesis_rmd.png
 ^\.travis\.yml$
 university-toronto-templates/
 .github/
+_pkgdown.yml
+docs/
+pkgdown/
